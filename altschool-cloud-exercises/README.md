@@ -1,5 +1,5 @@
-## Linux Commands
+# Linux Commands
 
-# pidstat
+## pidstat
 	- Displays statistics for Linux tasks — like CPU, memory, and I/O usage per PID
 
