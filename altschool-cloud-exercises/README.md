@@ -2,7 +2,7 @@
 
 ## 1. pidstat
 	- Displays statistics for Linux tasks — like CPU, memory, and I/O usage per PID
-	![pidstat](./assets/pidstat.png)
+![pidstat](./assets/pidstat.png)
 ## 2. lsblk
 	- Lists all block devices in a tree-like format. Used for identifying attached drives or partitions.
 ## 3. stat
