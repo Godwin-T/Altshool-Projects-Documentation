@@ -14,6 +14,7 @@ Understanding users and groups is fundamental to Linux security and access contr
 ```bash
 sudo useradd [options] username
 ```
+
 The `useradd` command creates new users on the system with various configuration options:
 - `-m`: Create a home directory
 - `-s /path/to/shell`: Specify the user's login shell
@@ -25,6 +26,7 @@ The `useradd` command creates new users on the system with various configuration
 cat /etc/passwd
 ```
 ![users](./assets/users.png)
+
 The `/etc/passwd` file contains essential user information including:
 - Username
 - User ID (UID)
@@ -57,7 +59,9 @@ The `/etc/group` file contains all group information including:
 ```bash
 sudo visudo
 ```
+
 The `visudo` command safely edits the `/etc/sudoers` file, which controls sudo privileges. It performs syntax checking to prevent configuration errors that could lock you out of administrative access.
+
 ![sudoers](./assets/sudoers.png)
 
 ## Common Use Cases
