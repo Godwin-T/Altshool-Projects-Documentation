@@ -1,0 +1,2 @@
+origin	git@github.com:Godwin-T/Altshool-Projects-Documentation.git (fetch)
+origin	git@github.com:Godwin-T/Altshool-Projects-Documentation.git (push)
