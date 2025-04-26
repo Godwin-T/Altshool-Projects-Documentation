@@ -1,0 +1,53 @@
+---
+- name: Setup Apache Server with PHP
+  hosts: all
+  remote_user: ubuntu
+  become: true
+
+  vars:
+    timezone: "Africa/Lagos"
+    index_php_content: |
+      <?php
+      echo date("F d, Y h:i:s A e", time());
+      ?>
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache, PHP, and PHP module for Apache
+      apt:
+        name:
+          - apache2
+          - php
+          - libapache2-mod-php
+        state: present
+
+    - name: Set timezone
+      command: timedatectl set-timezone "{{ timezone }}"
+
+    - name: Reload Apache to apply PHP module
+      service:
+        name: apache2
+        state: reloaded
+
+    - name: Ensure Apache is started and enabled
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: Remove default Apache index.html page
+      file:
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: Create index.php file
+      copy:
+        dest: /var/www/html/index.php
+        content: "{{ index_php_content }}"
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
