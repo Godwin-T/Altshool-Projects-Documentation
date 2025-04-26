@@ -39,7 +39,7 @@ Run the playbook using the following command:
 ansible-playbook -i host-inventory tasks.yml
 ```
 
-[!setup](./assets/setup.png)
+![setup](./assets/setup.png)
 
 You can also specify a different inventory file:
 
@@ -66,7 +66,7 @@ The playbook performs the following tasks in sequence:
 4. Start and enable the Apache service
 5. Deploy an index.php file to /var/www/html/
 
-[!tasks](./assets/playbook.png)
+![tasks](./assets/playbook.png)
 
 ## Customization
 
@@ -92,4 +92,4 @@ After running the playbook, verify the installation by:
    ```
    http://your-server-ip/
    ```
-[!page](./assets/page.png)
+![page](./assets/page.png)
