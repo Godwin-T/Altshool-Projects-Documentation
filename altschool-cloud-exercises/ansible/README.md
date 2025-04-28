@@ -88,6 +88,7 @@ After running the playbook, verify the installation by:
    systemctl status apache2
    ```
 
+![status](./assets/status.png)
 2. Accessing the web server in a browser:
    ```
    http://your-server-ip/
